@@ -1,3 +1,6 @@
+mod something;
+
+#[allow(dead_code)]
 fn main() {
     let number = 3;
 
@@ -37,4 +40,13 @@ fn takes_ownership(s: &String) {
 
 fn get_first_word(s: &str) -> &str {
     s.split_whitespace().next().expect("No idea what happened")
+}
+
+#[cfg(test)]
+mod test {
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
 }
